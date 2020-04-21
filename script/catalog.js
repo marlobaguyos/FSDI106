@@ -60,8 +60,15 @@ function displayCatalog(){
         </div>`;
         console.log(i,layout);
         // display the element in the DOM (HTML)
+
+        $("#catalog").append(layout);
     }
 
+}
+
+function init() {
+    console.log('Catalog page');
+    displayCatalog;
 }
 
 displayCatalog();
@@ -94,3 +101,5 @@ $("#register-btn").on('click', function(){
     register();
 });
 
+/* initialization */
+window.onload=init
