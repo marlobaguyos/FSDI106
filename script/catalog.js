@@ -6,6 +6,9 @@ function register() {
     var code = $("#code").val();
     var title = $("#title").val();
     var price = $("#price").val();
+    var description = $("#description");
+    var category = $("#category");
+    var image = $("#image");
 
 
 
