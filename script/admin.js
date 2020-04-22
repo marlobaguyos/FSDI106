@@ -1,5 +1,11 @@
 var items=[];
 
+function init(){
+    console.log("Admin Page");
+}
+
+window.onload=init;
+
 function register() {
     //save from the input in a var
     console.log('Current items' + items.length);

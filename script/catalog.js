@@ -86,6 +86,10 @@ $('#search-btn').on('click', function(){
         else {
             $('#' + items[i].code).show();
         }
+
+        if(searchString==""){
+            
+        }
     }
     
     

@@ -11,25 +11,9 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Store</a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="index.html">Catalog</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="admin.html">Register</a>
-                </li>
-            </ul>
-                <input class="form-control mr-sm-2" type="search" placeholder="Search A Product" aria-label="Search" id="search-txt">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="search-btn">Search</button>
-        </div>
-    </nav>
-    
-    <div class="container-xl bg-dark">
+
+
+    <div class="container-xl bg-dark wrapper">
 
         <!--<div class="row">
             <div class="col">
@@ -47,7 +31,47 @@
             </div>
         </div> -->
 
-        <div class="row" >
+        <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Store</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Catalog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="admin.html">Register</a>
+                    </li>
+                </ul>
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search A Product" aria-label="Search" id="search-txt">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="search-btn">Search</button>
+            </div>
+        </nav> -->
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Store</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Catalog<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="admin.html">admin</a>
+                    </li>
+                </ul>
+                <div class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search Catalogs" aria-label="Search" id="search-txt">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="search-btn">Search</button>
+                </div>
+            </div>
+        </nav>
+        <div class="row">
             <div class="col">
                 <div id="catalog" class="catalog-container">
                     <!-- we are going to display the itmes -->
@@ -57,8 +81,8 @@
         </div>
 
 
-    </div> 
-    
+    </div>
+
     <footer class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
