@@ -49,7 +49,7 @@ function displayCatalog(){
         var product = items[i];
         //Create the string
         var layout=`<div class="item" id="${product.code}">
-            <img src="${product.image}">
+            <img class="image" src="${product.image}">
             <h4>${product.title}</h4>
             <h6 class="item-price">${product.price}</h6>
             <p>${product.description}</p>

@@ -24,13 +24,19 @@ body {
 }
 
 .item .item-price{
-    color:rgb(158,30,30);
+    color:#EBE65E;
     font-size: 2rem;
     font-weight: bold;
 }
 
 .search-container {
     margin-top: 2em;
+}
+
+.button-div button {
+    background-color: #EBE65E !important;
+    border-style: none;
+    color: #141413; 
 }
 
 
