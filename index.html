@@ -9,20 +9,37 @@
     <title>Index</title>
 </head>
 
-<body>
+<body class="bg-light">
 
-    <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Register</a>
+                </li>
+            </ul>
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="search-txt">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="search-btn">Search</button>
+        </div>
+    </nav>
+
+    <div class="container bg-secondary">
 
         <div class="row">
             <div class="col">
                 <div class="search-container">
-                    
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="search-txt">
+
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"
+                        id="search-txt">
 
                     <div class="input-group-append">
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="search-btn">Search</button>
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit"
+                            id="search-btn">Search</button>
                     </div>
-                    
+
                 </div>
             </div>
         </div>
