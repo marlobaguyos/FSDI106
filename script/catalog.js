@@ -68,7 +68,7 @@ function displayCatalog(){
 
 function init() {
     console.log('Catalog page');
-    displayCatalog;
+
 }
 
 displayCatalog();
