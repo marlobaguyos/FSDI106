@@ -53,7 +53,7 @@ function displayCatalog(){
             <h4>${product.title}</h4>
             <h6>${product.price}</h6>
             <p>${product.description}</p>
-            <div class"button-div">
+            <div class="button-div">
                 <button class="btn btn-primary mb-2">Add to Cart</button>
             </div>
             
