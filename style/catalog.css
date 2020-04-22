@@ -13,3 +13,13 @@
     height: 120px;
     margin: 5px;
 }
+
+.item .button-div{
+    text-align: center;
+}
+
+.item-price{
+    color: rgb(158, 30, 30);
+    font-size: 2rem;
+    font-weight: bold;
+}
