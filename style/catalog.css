@@ -1,5 +1,8 @@
+body {
+    background-color: #EBE65E !important; 
+}
 .item{
-    border:1px solid tomato;
+    border:2px solid #ABABAB;
     display: inline-block;
     width: 250px;
     height: 400px;
@@ -7,6 +10,7 @@
     margin: 15px;
     padding: 10px;
     vertical-align: top;
+    color: white;
 }
 
 .item img{
@@ -28,6 +32,7 @@
 .search-container {
     margin-top: 2em;
 }
+
 
 
 
