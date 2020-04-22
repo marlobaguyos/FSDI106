@@ -51,7 +51,7 @@ function displayCatalog(){
         var layout=`<div class="item" id="${product.code}">
             <img src="${product.image}">
             <h4>${product.title}</h4>
-            <h6>${product.price}</h6>
+            <h6 class="item-price">${product.price}</h6>
             <p>${product.description}</p>
             <div class="button-div">
                 <button class="btn btn-primary mb-2">Add to Cart</button>

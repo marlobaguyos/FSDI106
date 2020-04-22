@@ -19,3 +19,9 @@
     text-align: center;
 }
 
+.item .item-price{
+    color:rgb(158,30,30);
+    font-size: 2rem;
+    font-weight: bold;
+}
+
