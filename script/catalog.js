@@ -101,5 +101,23 @@ $("#register-btn").on('click', function(){
     register();
 });
 
+$('#search-btn').on('click', function(){
+    /* body search function */
+    var searchString = $('#search-txt').val();
+    /* travel the array */
+    for(var i=0;i<items.length;i++){
+        if(searchString.toUpperCase() != items[i].title.toUpperCase()){
+            $('#' + items[i].code).hide();
+        }
+        else {
+            $('#' + items[i].code).show();
+        }
+    }
+    /* conditional */
+
+    /* execute the change */
+})
+
+
 /* initialization */
 window.onload=init
