@@ -27,6 +27,7 @@ function register() {
     });
 
     console.log('New item:' + items.length);
+    alert("You register a new product")
 
 }
 
