@@ -1,4 +1,4 @@
-var serverURL=""http://restclass.azurewebsites;
+var serverURL="http://restclass.azurewebsites.net/API/";
 
 var items=[];
 
@@ -42,6 +42,12 @@ function register() {
     console.log('New item:' + items.length);
     alert("You registered a new product")
     }
+
+    //Asyn JS and XML
+    //send obj to server
+    $.ajax({
+
+    })
 
 }
 
