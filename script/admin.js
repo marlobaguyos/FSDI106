@@ -18,6 +18,7 @@ class Item {
         this.description=description;
         this.category=category;
         this.image=image;
+        this.user="Marlo";
     }
 }
 
@@ -43,9 +44,9 @@ function register() {
     }
 
     //Asyn JS and XML
-    //send obj to server
+    //send obj to server (string, int, boolean)
     $.ajax({
-        
+
     });
 
 }
