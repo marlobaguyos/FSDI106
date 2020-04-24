@@ -32,15 +32,14 @@ function register() {
     var image=$('#image').val();
 
     if(code!=" " && title!=" " && price!=" " && description!=" " && category!=" " && image!=" " ){
-        
-// create an object
-    var newItem=new Item(code,title,price,description,category,image);
-    // assing the var to the attribute
-    items.push(newItem);
-    console.log(newItem);
+        // create an object
+        var newItem=new Item(code,title,price,description,category,image);
+        // assing the var to the attribute
+        items.push(newItem);
+        console.log(newItem);
 
-    console.log('New item:' + items.length);
-    alert("You registered a new product")
+        console.log('New item:' + items.length);
+        alert("You registered a new product")
     }
 
     //Asyn JS and XML
