@@ -1,46 +1,64 @@
 /* global variables */
+var items=[];
+var serverURL="http://restclass.azurewebsites.net/API/";
 
-var items = [
-    {
-        // first item
-        code:'1tvs',
-        title:'TV',
-        price:1000,
-        description:"This is the long description of the item",
-        category:'Electronics',
-        image:'img/tv.jpg'
-    },
-    {
-        //second item
-        code: '1ph10',
-        title: 'Phone',
-        price: 10000,
-        description: "This is the long description of the item",
-        category: 'Mobile devices',
-        image: 'img/iphone.jpg'
-    },
-    {
-        //third item
-        code: '2spk',
-        title: 'Speakers',
-        price: 100,
-        description: "This is the long description of the item",
-        category: 'Sound',
-        image: 'img/sound.jpg'
-    },
-    {
-        //fourth item
-        code: '1cpd',
-        title: 'Computer',
-        price: 500,
-        description: "This is the long description of the item",
-        category: 'Compute',
-        image: 'img/pc.jpg'
-    }
+// var items = [
+//     {
+//         // first item
+//         code:'1tvs',
+//         title:'TV',
+//         price:1000,
+//         description:"This is the long description of the item",
+//         category:'Electronics',
+//         image:'img/tv.jpg'
+//     },
+//     {
+//         //second item
+//         code: '1ph10',
+//         title: 'Phone',
+//         price: 10000,
+//         description: "This is the long description of the item",
+//         category: 'Mobile devices',
+//         image: 'img/iphone.jpg'
+//     },
+//     {
+//         //third item
+//         code: '2spk',
+//         title: 'Speakers',
+//         price: 100,
+//         description: "This is the long description of the item",
+//         category: 'Sound',
+//         image: 'img/sound.jpg'
+//     },
+//     {
+//         //fourth item
+//         code: '1cpd',
+//         title: 'Computer',
+//         price: 500,
+//         description: "This is the long description of the item",
+//         category: 'Compute',
+//         image: 'img/pc.jpg'
+//     }
 
-];
+// ];
 
 /*functions*/
+
+function fetchCatalog(){
+    //get the items from the server
+    $.ajax({
+        url:serverURL+"points",
+        type:"GET",
+        success: function(res){
+            console.log("Server responded OK", res);
+        },
+        error:function(Details){
+            console.log("Error", Details);
+        }
+    });
+}
+
+
 function displayCatalog(){
     
     // travel the array
@@ -68,6 +86,8 @@ function displayCatalog(){
 
 function init() {
     console.log('Catalog page');
+    fetchCatalog();
+    displayCatalog();
 
 }
 

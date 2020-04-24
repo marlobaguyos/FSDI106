@@ -22,6 +22,18 @@ class Item {
     }
 }
 
+function clearForm(){
+    $('#code').val("");
+    $('#code').focus();
+    $('#title').val("");
+    $('#price').val("");
+    $('#description').val("");
+    $('#category').val("");
+    $('#image').val("");
+
+
+}
+
 function register() {
     //save from the input in a var
     console.log('Current items' + items.length);
@@ -37,16 +49,27 @@ function register() {
         var newItem=new Item(code,title,price,description,category,image);
         // assing the var to the attribute
         items.push(newItem);
-        console.log(newItem);
+        //parse the element into a JSON string
+        var jsonString=JSON.stringify(newItem);
 
-        console.log('New item:' + items.length);
-        alert("You registered a new product")
+        console.log(newItem);
+        console.log(jsonString);
     }
 
     //Asyn JS and XML
     //send obj to server (string, int, boolean)
     $.ajax({
-        
+        url:serverURL+"points",
+        type:"POST",
+        contentType:"application/json",
+        data:jsonString,
+        success: function(response){
+            console.log("it works", response);
+            clearForm();
+        },
+        error:function(errorDetails){
+            console.log("Error, Something went wrong", errorDetails);
+        }
     });
 
 }
