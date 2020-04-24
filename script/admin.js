@@ -65,6 +65,7 @@ function register() {
         data:jsonString,
         success: function(response){
             console.log("it works", response);
+            $('#alert-box').removeClass("hidden");
             clearForm();
         },
         error:function(errorDetails){

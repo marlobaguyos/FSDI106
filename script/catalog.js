@@ -49,9 +49,11 @@ function fetchCatalog(){
     $.ajax({
         url:serverURL+"points",
         type:"GET",
-        success: function(res){
+        success:function(res){
             console.log("Server responded OK", res);
             for(var j=0;j<res.length;j++){
+
+                //solve display my items
                 items.push(res[j]);
 
             }
@@ -91,7 +93,6 @@ function displayItems(product){
             
         </div>`;
         // display the element in the DOM (HTML)
-
         $("#catalog").append(layout);
     //}
 

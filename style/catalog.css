@@ -11,6 +11,7 @@
     padding: 10px;
     vertical-align: top;
     color: white;
+    text-align: center;
 }
 
 .item img{
@@ -39,9 +40,9 @@
     color: #141413; 
 }
 
-.wrapper {
+/* .wrapper {
 height: 91vh;
-}
+} */
 
 
 

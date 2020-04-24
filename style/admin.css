@@ -7,3 +7,7 @@
     border-style: none;
     color: #141413; 
 } */
+
+.hidden{
+    display: none;
+}
