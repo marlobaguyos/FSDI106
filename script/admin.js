@@ -65,7 +65,12 @@ function register() {
         data:jsonString,
         success: function(response){
             console.log("it works", response);
+            //show the notification
             $('#alert-box').removeClass("hidden");
+            //hide the
+            setTimeout(function(){
+                $('#alert-box').addClass('hidden');
+            },3000);
             clearForm();
         },
         error:function(errorDetails){
@@ -81,45 +86,45 @@ $("#register-btn").on('click', function(){
 
 // homework
 
-function solveHW(){
-    var data=[
-        {
-            age:28,
-            name:"Eli",
-            color:"Orange"
-        },
-        {
-            age:35,
-            name:"Zach",
-            color:"Blue",
-        },
-        {
-            age:26,
-            name:"Larry",
-            color:"Blue"
-        },
-        {
-            age:37,
-            name:"Ed",
-            color:"blue"
-        },
-        {
-            age:30,
-            name:"Jeremy",
-            color:"Peach",
-        },
-        {
-            age:28,
-            name:"Pavel",
-            color:"purple"
-        },
-        {
-            age:33,
-            name:"Chad",
-            color:"Red"
-        }
-    ]
-}
+// function solveHW(){
+//     var data=[
+//         {
+//             age:28,
+//             name:"Eli",
+//             color:"Orange"
+//         },
+//         {
+//             age:35,
+//             name:"Zach",
+//             color:"Blue",
+//         },
+//         {
+//             age:26,
+//             name:"Larry",
+//             color:"Blue"
+//         },
+//         {
+//             age:37,
+//             name:"Ed",
+//             color:"blue"
+//         },
+//         {
+//             age:30,
+//             name:"Jeremy",
+//             color:"Peach",
+//         },
+//         {
+//             age:28,
+//             name:"Pavel",
+//             color:"purple"
+//         },
+//         {
+//             age:33,
+//             name:"Chad",
+//             color:"Red"
+//         }
+//     ]
+// }
 
 //Who (name - age) is the oldest
 
