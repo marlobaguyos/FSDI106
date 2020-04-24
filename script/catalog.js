@@ -51,20 +51,34 @@ function fetchCatalog(){
         type:"GET",
         success: function(res){
             console.log("Server responded OK", res);
+            for(var j=0;j<res.length;j++){
+                items.push(res[j]);
+
+            }
+            displayCatalog();
         },
         error:function(Details){
             console.log("Error", Details);
         }
     });
+    
+
+
 }
 
-
 function displayCatalog(){
+    for(var i=0; i<items.length;i++){
+        displayItems(items[i]);
+    }
+
+
+}
+
+function displayItems(product){
     
     // travel the array
-    for(var i = 0; i<items.length; i++){
+    //for(var i = 0; i<items.length; i++){
         // get the element from the array
-        var product = items[i];
         //Create the string
         var layout=`<div class="item" id="${product.code}">
             <img class="image" src="${product.image}">
@@ -76,19 +90,16 @@ function displayCatalog(){
             </div>
             
         </div>`;
-        console.log(i,layout);
         // display the element in the DOM (HTML)
 
         $("#catalog").append(layout);
-    }
+    //}
 
 }
 
 function init() {
     console.log('Catalog page');
     fetchCatalog();
-    displayCatalog();
-
 }
 
 displayCatalog();
