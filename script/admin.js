@@ -45,8 +45,8 @@ function register() {
     //Asyn JS and XML
     //send obj to server
     $.ajax({
-
-    })
+        
+    });
 
 }
 
