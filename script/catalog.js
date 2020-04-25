@@ -84,16 +84,25 @@ function displayItems(product){
     //for(var i = 0; i<items.length; i++){
         // get the element from the array
         //Create the string
-        var layout=`<div class="item" id="${product.code}">
-            <img class="image" src="${product.image}">
-            <h4>${product.title}</h4>
-            <h6 class="item-price">${product.price}</h6>
-            <p>${product.description}</p>
-            <div class="button-div">
-                <button class="btn btn-primary mb-2">Add to Cart</button>
+        var layout=
+        `<div class="item" id="${product.code}">
+            <div class="card mb-4 shadow-sm">
+                <div class="card-header">
+                    <h4 class="my-0 font-weight-normal">${product.title}</h4>
+                </div>
+                <div class="card-body">
+                <img class="image" src="${product.image}">
+                <h1 class="card-title pricing-card-title">$${product.price}</h1>
+                    <ul class="list-unstyled mt-3 mb-4">
+                        <li>${product.description}</li>
+                        <hr>
+                        <li>${product.category}</li>
+                    </ul>
+                <button type="button" class="mb-2 btn btn-lg btn-block btn-outline-primary">Buy</button>
+                </div>
             </div>
-            
         </div>`;
+
         // display the element in the DOM (HTML)
         $("#catalog").append(layout);
     //}
