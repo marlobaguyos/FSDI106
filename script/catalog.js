@@ -54,8 +54,10 @@ function fetchCatalog(){
             for(var j=0;j<res.length;j++){
 
                 //solve display my items
-                items.push(res[j]);
-
+                if(res[j].user=="Marlo" && res[j].tittle!=""){
+                    items.push(res[j]);
+                }
+                
             }
             displayCatalog();
         },
@@ -101,6 +103,7 @@ function displayItems(product){
 function init() {
     console.log('Catalog page');
     fetchCatalog();
+    $("#search-btn").click(Search);
 }
 
 displayCatalog();
@@ -111,16 +114,16 @@ $('#search-btn').on('click', function(){
     /* travel the array */
     for(var i=0;i<items.length;i++){
         /* conditional */
-        if(searchString.toUpperCase() != items[i].title.toUpperCase()){
+        if(items[i].title.toUpperCase().includes(searchString.toUpperCase())){
             /* execute the change */
-            $('#' + items[i].code).hide();
+            $('#' + items[i].code).show();
         }
         else {
-            $('#' + items[i].code).show();
+            $('#' + items[i].code).hide();
         }
 
         if(searchString==""){
-            
+            $('#'+items[i].code).show();
         }
     }
     
