@@ -104,17 +104,23 @@ function init() {
     console.log('Catalog page');
     fetchCatalog();
     $("#search-btn").click(Search);
+    $("#search-txt").keypress(function(e){
+        if(e.keyCode==13){
+            Search();
+        }
+    });
 }
 
 displayCatalog();
 
-$('#search-btn').on('click', function(){
+function Search(){
+// $('#search-btn').on('click', function(){
     /* body search function */
     var searchString = $('#search-txt').val();
     /* travel the array */
     for(var i=0;i<items.length;i++){
         /* conditional */
-        if(items[i].title.toUpperCase().includes(searchString.toUpperCase())){
+        if(items[i].title.toUpperCase().includes(searchString.toUpperCase()) || items[i].code.toUpperCase().includes(searchString.toUpperCase()) || items[i].description.toUpperCase().includes(searchString.toUpperCase())) {
             /* execute the change */
             $('#' + items[i].code).show();
         }
@@ -126,10 +132,8 @@ $('#search-btn').on('click', function(){
             $('#'+items[i].code).show();
         }
     }
-    
-    
-});
-
+        
+};
 
 /* initialization */
 window.onload=init

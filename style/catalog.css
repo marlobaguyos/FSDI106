@@ -1,10 +1,10 @@
-/* body {
-    background-color: #EBE65E !important; 
-} */
+body {
+    background-color: #141413 !important; 
+}
 .item{
-    border:2px solid #ABABAB;
+    border:2px solid #EBE65E;
     display: inline-block;
-    width: 250px;
+    width: 300px;
     height: 400px;
     border-radius: 5px;
     margin: 15px;
@@ -44,6 +44,10 @@
 height: 91vh;
 } */
 
+.container-xl {
+    background-color: #ABABAB;
+    text-align: center;
+}
 
 
 
