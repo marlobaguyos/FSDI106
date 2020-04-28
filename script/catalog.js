@@ -92,7 +92,7 @@ function displayItems(product){
                 </div>
                 <div class="card-body">
                 <img class="image" src="${product.image}">
-                <h1 class="card-title pricing-card-title">${product.price}</h1>
+                <h1 class="card-title pricing-card-title">$${product.price}</h1>
                     <ul class="list-unstyled mt-3 mb-4">
                         <li>${product.description}</li>
                         <hr>
