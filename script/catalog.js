@@ -1,6 +1,6 @@
 /* global variables */
 var items=[];
-var serverURL="http://restclass.azurewebsites.net/API/";
+var serverURL="http://localhost:8080/api/";
 
 // var items = [
 //     {
@@ -47,7 +47,7 @@ var serverURL="http://restclass.azurewebsites.net/API/";
 function fetchCatalog(){
     //get the items from the server
     $.ajax({
-        url:serverURL+"points",
+        url:serverURL+"catalog",
         type:"GET",
         success:function(res){
             console.log("Server responded OK", res);
