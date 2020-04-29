@@ -1,6 +1,6 @@
 /* global variables */
-var items=[];
-var serverURL="http://localhost:8080/api/";
+var items = [];
+var serverURL = "http://localhost:8080/api/";
 
 // var items = [
 //     {
@@ -44,47 +44,47 @@ var serverURL="http://localhost:8080/api/";
 
 /*functions*/
 
-function fetchCatalog(){
+function fetchCatalog() {
     //get the items from the server
     $.ajax({
-        url:serverURL+"catalog",
-        type:"GET",
-        success:function(res){
+        url: serverURL + "catalog",
+        type: "GET",
+        success: function (res) {
             console.log("Server responded OK", res);
-            for(var j=0;j<res.length;j++){
+            for (var j = 0; j < res.length; j++) {
 
                 //solve display my items
-                if(res[j].user=="Marlo" && res[j].tittle!=""){
+                if (res[j].user == "Marlo" && res[j].tittle != "") {
                     items.push(res[j]);
                 }
-                
+
             }
             displayCatalog();
         },
-        error:function(Details){
+        error: function (Details) {
             console.log("Error", Details);
         }
     });
-    
+
 
 
 }
 
-function displayCatalog(){
-    for(var i=0; i<items.length;i++){
+function displayCatalog() {
+    for (var i = 0; i < items.length; i++) {
         displayItems(items[i]);
     }
 
 
 }
 
-function displayItems(product){
-    
+function displayItems(product) {
+
     // travel the array
     //for(var i = 0; i<items.length; i++){
-        // get the element from the array
-        //Create the string
-        var layout=
+    // get the element from the array
+    //Create the string
+    var layout =
         `<div class="item" id="${product.code}">
             <div class="card mb-4 shadow-sm">
                 <div class="card-header">
@@ -103,8 +103,8 @@ function displayItems(product){
             </div>
         </div>`;
 
-        // display the element in the DOM (HTML)
-        $("#catalog").append(layout);
+    // display the element in the DOM (HTML)
+    $("#catalog").append(layout);
     //}
 
 }
@@ -113,8 +113,8 @@ function init() {
     console.log('Catalog page');
     fetchCatalog();
     $("#search-btn").click(Search);
-    $("#search-txt").keypress(function(e){
-        if(e.keyCode==13){
+    $("#search-txt").keypress(function (e) {
+        if (e.keyCode == 13) {
             Search();
         }
     });
@@ -122,27 +122,26 @@ function init() {
 
 displayCatalog();
 
-function Search(){
-// $('#search-btn').on('click', function(){
+function Search() {
+    // $('#search-btn').on('click', function(){
     /* body search function */
     var searchString = $('#search-txt').val();
     /* travel the array */
-    for(var i=0;i<items.length;i++){
+    for (var i = 0; i < items.length; i++) {
         /* conditional */
-        if(items[i].title.toUpperCase().includes(searchString.toUpperCase()) || items[i].code.toUpperCase().includes(searchString.toUpperCase()) || items[i].description.toUpperCase().includes(searchString.toUpperCase())) {
+        if (items[i].title.toUpperCase().includes(searchString.toUpperCase()) || items[i].code.toUpperCase().includes(searchString.toUpperCase()) || items[i].description.toUpperCase().includes(searchString.toUpperCase())) {
             /* execute the change */
             $('#' + items[i].code).show();
-        }
-        else {
+        } else {
             $('#' + items[i].code).hide();
         }
 
-        if(searchString==""){
-            $('#'+items[i].code).show();
+        if (searchString == "") {
+            $('#' + items[i].code).show();
         }
     }
-        
+
 };
 
 /* initialization */
-window.onload=init
+window.onload = init
