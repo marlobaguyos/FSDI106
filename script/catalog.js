@@ -47,7 +47,7 @@ var serverURL = "http://localhost:8080/api/";
 function fetchCatalog() {
     //get the items from the server
     $.ajax({
-        url: serverURL + "catalog",
+        url: serverURL + "items/Marlo",
         type: "GET",
         success: function (res) {
             console.log("Server responded OK", res);
