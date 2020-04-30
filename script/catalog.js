@@ -1,6 +1,7 @@
 /* global variables */
 var items = [];
 var serverURL = "http://localhost:8080/api/";
+var userName = "Marlo";
 
 // var items = [
 //     {
@@ -47,7 +48,7 @@ var serverURL = "http://localhost:8080/api/";
 function fetchCatalog() {
     //get the items from the server
     $.ajax({
-        url: serverURL + "items/Marlo",
+        url: serverURL + "items/" + userName,
         type: "GET",
         success: function (res) {
             console.log("Server responded OK", res);
